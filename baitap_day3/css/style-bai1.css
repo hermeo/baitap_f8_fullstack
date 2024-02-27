@@ -1,0 +1,27 @@
+table tr td input {
+  width: 500px;
+  height: 30px;
+}
+h1 {
+  text-align: center;
+}
+span {
+  border-bottom: 1px solid orange;
+}
+button {
+  background-color: aqua;
+}
+#button-send {
+  text-align: center;
+}
+#button-send > button {
+  color: white;
+  padding: 10px;
+  border: 1px solid aqua;
+}
+table {
+  margin: 0 auto;
+}
+.hang-muc {
+  color: grey;
+}

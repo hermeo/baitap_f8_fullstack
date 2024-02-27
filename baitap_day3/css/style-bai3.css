@@ -1,0 +1,18 @@
+table {
+  margin: 0 auto;
+}
+form > div {
+  text-align: center;
+}
+form > div > button {
+  border: 1px solid aqua;
+}
+form > table tr td input {
+  border: 1px solid aqua;
+}
+#webserver {
+  border: 1px solid aqua;
+}
+table label input {
+  border: 1px solid aqua;
+}

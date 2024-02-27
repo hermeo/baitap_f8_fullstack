@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 3</title>
+    <link rel="stylesheet" href="./css/style-bai3.css" />
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>User name</td>
+          <td>
+            <input type="text" name="username" />
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>
+            <input type="password" name="password" />
+          </td>
+        </tr>
+        <tr>
+          <td>City of Employment</td>
+          <td>
+            <input type="text" name="city-of-employment" />
+          </td>
+        </tr>
+        <tr>
+          <td>Web server</td>
+          <td>
+            <select name="webserver" id="webserver">
+              <option value="0">-choose a server</option>
+              <option value="Apache Tomcat">Apache Tomcat</option>
+              <option value="Lighttpd">Lighttpd</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Please specify your role</td>
+          <td>
+            <div>
+              <label for="admin"
+                ><input type="radio" name="role" id="admin" /> Admin</label
+              >
+            </div>
+            <div>
+              <label for="Engineer"
+                ><input type="radio" name="role" id="Engineer" />
+                Engineer</label
+              >
+            </div>
+            <div>
+              <label for="Manager"
+                ><input type="radio" name="role" id="Manager" /> Manager</label
+              >
+            </div>
+            <div>
+              <label for="Guest"
+                ><input type="radio" name="role" id="Guest" /> Guest</label
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>single Sign-on to the following</td>
+          <td>
+            <div>
+              <label for="mail"
+                ><input type="checkbox" name="sign" id="mail" /> Mail</label
+              >
+            </div>
+            <div>
+              <label for="payroll"
+                ><input type="checkbox" name="sign" id="payroll" />
+                Payroll</label
+              >
+            </div>
+            <div>
+              <label for="self-service"
+                ><input type="checkbox" name="sign" id="self-service" />
+                Self-service</label
+              >
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <button>login</button>
+        <button>Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

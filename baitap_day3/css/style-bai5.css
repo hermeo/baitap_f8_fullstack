@@ -1,0 +1,21 @@
+div {
+  text-align: center;
+}
+#button1 {
+  background-color: cyan;
+  border: 1px solid cyan;
+  font-size: 30px;
+  color: white;
+  padding: 10px 30px;
+}
+h1 > span {
+  color: cyan;
+}
+p {
+  margin-bottom: 40px;
+}
+.button2 {
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+}
