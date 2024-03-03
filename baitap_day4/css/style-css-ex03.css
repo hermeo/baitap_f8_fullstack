@@ -1,0 +1,80 @@
+section h1 {
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  text-align: center;
+
+  /* padding: 20px 30px; */
+  padding-left: 500px;
+}
+.content table {
+  margin: 0 auto;
+}
+.tablinks {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  widows: 100%;
+  padding: 1rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.tablinks:hover {
+  background-color: blue;
+  color: #fff;
+}
+.content table tr td {
+  padding: 50px;
+}
+#skincare table {
+  margin: 0 auto;
+}
+
+.tabs input:checked + div {
+  background-color: blue;
+  color: #fff;
+}
+
+.product {
+  position: relative;
+}
+.product img {
+  width: 200px;
+}
+
+.action-buttons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  text-align: center;
+  opacity: 0;
+}
+.action-buttons .add-cart {
+  margin-top: 10px;
+  width: 200px;
+}
+.action-buttons .button1,
+.action-buttons .button1,
+.action-buttons .button1 {
+  margin-left: 30px;
+}
+
+.action-buttons button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+.product:hover .action-buttons {
+  opacity: 1;
+}
