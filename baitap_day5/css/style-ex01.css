@@ -1,0 +1,84 @@
+h1 {
+  font-family: "Lobster", sans-serif;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  /* border-spacing: 0; */
+}
+td {
+  /* padding: 0; */
+  vertical-align: top;
+}
+
+table tr td {
+  font-size: 0;
+}
+
+.button {
+  display: flex;
+  /* align-items: flex-start; */
+  /* position: fixed; */
+}
+.input-container {
+  position: relative;
+}
+.note {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #888;
+}
+
+#number {
+  position: relative;
+  padding: 30px 10px 10px 10px;
+  width: 30px;
+}
+#number i {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+textarea {
+  box-sizing: border-box;
+}
+#button-send {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+}
+/* .input-container {
+  position: relative;
+} */
+/* .input-container label {
+  display: none;
+  position: absolute;
+} */
+/* .input:active + label {
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+#subject {
+  width: 170px;
+}
+#message {
+  width: 120px;
+  display: none;
+  border: 1px solid black;
+}
+.form-table {
+  width: 500px;
+  border: 1px solid black;
+}
+input:hover::before {
+  content: "a";
+}

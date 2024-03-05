@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bài tập 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style-ex01.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-table">
+      <h1>Hey there</h1>
+      <p>
+        <label for=""> We'd like to hear from you.</label> Send us your message
+        or just say hy with our contact form or directly via phone, we love to
+        chat
+      </p>
+      <form action="">
+        <table>
+          <tr>
+            <label id="message">Enter your name</label>
+          </tr>
+          <tr>
+            <td>
+              <div class="input-container">
+                <button id="user"><i class="fa-solid fa-user"></i></button>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  class="input"
+                  onfocus="show()"
+                  onblur="hide()"
+                />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button disabled><i class="fa-solid fa-envelope"></i></button>
+              <input type="email" placeholder="your@domain.com" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button disabled><i class="fa-solid fa-phone"></i></button>
+              <input type="email" placeholder="+44 00 123" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button disabled><i class="fa-solid fa-wallet"></i></button>
+              <select name="" id="subject">
+                <option value="">Subject</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="button">
+              <button id="number" disabled>
+                <div style=""><i class="fa-solid fa-message"></i></div>
+              </button>
+              <textarea
+                name=""
+                id=""
+                cols="22"
+                rows="10"
+                placeholder="message"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <label for="">
+          <input type="checkbox" />Send me a copy of this message
+          <button id="button-send">SEND</button>
+        </label>
+      </form>
+    </div>
+    <script>
+      function show() {
+        var message = document.getElementById("message");
+        message.style.display = "block";
+      }
+      function hide() {
+        var message = document.getElementById("message");
+        message.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

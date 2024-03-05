@@ -1,0 +1,21 @@
+.content-para {
+  display: none;
+}
+label {
+  background-color: orange;
+}
+label::before {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+input[type="checkbox"]:checked ~ p {
+  display: block;
+  background-color: white;
+}
+input[type="checkbox"]:checked + label::before {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
