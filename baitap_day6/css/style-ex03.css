@@ -1,0 +1,164 @@
+body {
+  /* width: 2000px; */
+  height: 100vh;
+  background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  background-position: right bottom;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  align-items: center;
+}
+.container {
+  width: 1000px;
+  height: 500px;
+  /* border: 1px solid red; */
+  text-align: justify;
+  display: flex;
+  margin: 0 auto;
+  margin-left: 300px;
+  margin-top: 00px;
+  position: relative;
+  text-align: center;
+  /* justify-content: center; */
+}
+.container .col-left {
+  width: 400px;
+  /* height: 2000px; */
+  border: 1px solid ff574d;
+  padding-top: 70px;
+  background-color: #ff574d;
+  border-radius: 10px;
+}
+.container .col-left .logo #logo-JL {
+  font-size: 40px;
+  border: 1px solid white;
+  color: #ff574d;
+  background-color: white;
+  font-weight: bold;
+}
+.container .col-left .logo #tieude {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+.content {
+  font-size: 17px;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.5;
+  color: white;
+}
+#button-read-more button {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #ff574d;
+  border: 1px solid #ff574d;
+}
+.icon {
+  margin-top: 30px;
+  font-size: 30px;
+}
+.icon a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+}
+.col-left {
+  position: relative;
+  border: 1px solid ff574d;
+}
+#chuyen-tiep {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #ff574d;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid white;
+}
+.container .col-right {
+  width: 600px;
+}
+.container .col-right h2 {
+  margin-top: 35px;
+  font-size: 50px;
+}
+.container .col-right h2 span {
+  color: #ff574d;
+}
+#your {
+  border-bottom: 1px solid #ff574d;
+}
+table {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.col-right form table tr td input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid white;
+  margin-bottom: 30px;
+}
+/* .button-login {
+  text-align: center;
+} */
+.col-right form table tr td input::placeholder {
+  padding-top: 20px;
+  font-size: 20px;
+}
+.col-right form table tr td input[type="checkbox"] {
+  width: 18px;
+}
+#row {
+  padding-bottom: 30px;
+}
+.col-right form table tr #checkbox {
+  font-size: 18px;
+  position: relative;
+}
+.col-right form table tr #checkbox span {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+}
+.col-right form table tr #checkbox input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.col-right form table tr #checkbox a {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+  top: -8px;
+  text-decoration: none;
+  color: black;
+}
+.col-right form table tr td button {
+  width: 300px;
+  height: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 30px;
+  background-color: #ff574d;
+  border: 1px solid #ff574d;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.col-right form table tr td #register {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
