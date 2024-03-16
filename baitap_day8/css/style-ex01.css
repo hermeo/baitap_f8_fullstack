@@ -11,7 +11,12 @@
 
 body {
   font-family: Manrope, sans-serif;
-  /* background-image: url(../image/pexels-andrei-i-17867773.svg); */
+
+  background-image: url(../image/pexels-andrei-i-17867773-1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  color: white;
 }
 .box {
   margin: 10px 20px;
@@ -25,7 +30,6 @@ body {
   display: inline-block;
 }
 .menu {
-  /* text-align: right; */
   position: absolute;
   right: 0;
   top: 10px;
@@ -33,6 +37,7 @@ body {
 
 .menu ul {
   font-size: 0;
+  position: relative;
 }
 
 .menu ul li a {
@@ -41,33 +46,39 @@ body {
   color: black;
   padding: 30px;
 }
+.box .menu ul .drop-down ul li {
+  display: block;
+}
 .drop-down {
   border: 1px solid white;
-  visibility: hidden;
-  /* border: 1px solid red; */
-  /* display: grid; */
+
   position: absolute;
   top: 100px;
-  /* left: -200px; */
-  display: inline;
+  left: -200px;
+
+  background-color: white;
+  color: black;
 }
+
+#documentaion > .drop-down {
+  visibility: hidden;
+}
+
 .drop-down ul {
   display: inline-block;
 
   padding: 80px;
-  /* padding: 30px; */
+  padding: 30px;
 }
 .drop-down ul li {
   list-style-type: none;
 }
-.drop-down ul li a {
-  text-decoration: none;
-  color: black;
-}
-.menu :hover {
+
+.menu ul li a:hover {
   color: aquamarine;
+  background-color: blueviolet;
 }
 
-.menu:hover + .drop-down {
+.menu ul > #documentaion:hover > .drop-down {
   visibility: visible;
 }

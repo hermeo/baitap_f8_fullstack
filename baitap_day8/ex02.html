@@ -5,6 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style-ex02.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="cart">
+        <table>
+          <tr id="product-cart">
+            <div class="shopping-cart">
+              <th id="cart1">Shopping Cart <span id="quantity">4</span></th>
+              <th id="close">
+                <i class="fa-solid fa-circle-xmark" style="color: #e81111"></i>
+              </th>
+            </div>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="product">
+                <img src="./image/iphone14.png" alt="" />
+                <span class="product-name">Affinity Queen Poster Bed</span>
+                <span class="product-quality"
+                  >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span
+                >
+                <span class="price">1x$570</span>
+                <span class="product-close"
+                  ><i class="fa-solid fa-xmark"></i
+                ></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="product">
+                <img src="./image/iphone14.png" alt="" />
+                <span class="product-name">Affinity Queen Poster Bed</span>
+                <span class="product-quality"
+                  >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span
+                >
+                <span class="price">1x$570</span>
+                <span class="product-close"
+                  ><i class="fa-solid fa-xmark"></i
+                ></span>
+              </div>
+            </td>
+          </tr>
+          <tr colspan="2">
+            <td>Subtotal</td>
+            <td id="total">$920.00</td>
+          </tr>
+          <tr colspan="2">
+            <td>
+              <span id="taxes">Taxes and shipping calculated</span>
+            </td>
+          </tr>
+          <tr colspan="2">
+            <td>
+              <button class="view-cart">View Cart</button>
+            </td>
+          </tr>
+          <tr colspan="2">
+            <td>
+              <button class="Add-Cart">Add To Cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="transport">
+                <span class="truck material-symbols-outlined">
+                  local_shipping
+                </span>
+                <span class="free-ship">Spend $ 499.00 to Free Shipping</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>
