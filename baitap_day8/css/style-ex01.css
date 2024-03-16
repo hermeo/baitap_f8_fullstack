@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../font/Manrope/Manrope-Medium.ttf);
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  /* background-image: url(../image/pexels-andrei-i-17867773.svg); */
+}
+.box {
+  margin: 10px 20px;
+  position: relative;
+}
+.box b {
+  font-size: 26px;
+}
+
+.box .menu ul li {
+  display: inline-block;
+}
+.menu {
+  /* text-align: right; */
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.menu ul {
+  font-size: 0;
+}
+
+.menu ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+}
+.drop-down {
+  border: 1px solid white;
+  visibility: hidden;
+  /* border: 1px solid red; */
+  /* display: grid; */
+  position: absolute;
+  top: 100px;
+  /* left: -200px; */
+  display: inline;
+}
+.drop-down ul {
+  display: inline-block;
+
+  padding: 80px;
+  /* padding: 30px; */
+}
+.drop-down ul li {
+  list-style-type: none;
+}
+.drop-down ul li a {
+  text-decoration: none;
+  color: black;
+}
+.menu :hover {
+  color: aquamarine;
+}
+
+.menu:hover + .drop-down {
+  visibility: visible;
+}
