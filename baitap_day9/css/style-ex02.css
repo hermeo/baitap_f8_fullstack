@@ -1,0 +1,84 @@
+.container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.box {
+  width: 32%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid grey;
+  position: relative;
+  /* margin: 0 auto; */
+}
+/* .content {
+  position: relative;
+} */
+.effect-content {
+  width: 100%;
+  height: 200px;
+  border: 1px solid white;
+}
+.effect-content > h2 {
+  position: absolute;
+  top: 20px;
+}
+.effect-content > .learn-more {
+  position: absolute;
+  bottom: 10%;
+}
+.learn-more button {
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.learn-more button:hover {
+  background-color: white;
+  color: black;
+}
+.effect-content {
+  color: white;
+}
+.effect-content > p {
+  position: absolute;
+  bottom: 10%;
+}
+.effect {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/andreas-slotosch-PEw3Z6MI-jA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+  border: 10px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box:hover .effect {
+  transform: translateY(-100%);
+}
+
+.effect-content {
+  opacity: 0; /* Ẩn nội dung ban đầu */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.box:hover .effect-content {
+  opacity: 1; /* Hiển thị nội dung khi hover */
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tieu-de {
+  text-align: center;
+  margin-bottom: 50px;
+}
+form table {
+  margin: 0 auto;
+  /* padding: 10px; */
+}
+form table tr td input {
+  width: 230px;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+form table tr td select {
+  width: 230px;
+  height: 30px;
+  border: 1px solid #fff;
+}
+form table tr td textarea {
+  width: 460px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+form > div {
+  text-align: center;
+}
+form > div > button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+.form-field {
+  position: relative;
+}
+.form-field .form-label {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 10px;
+  top: 50%;
+  pointer-events: none;
+  color: #999;
+  /* transform: translate(50%, 50%); */
+}
+.form-field > textarea + .form-label {
+  position: absolute;
+  top: 22%;
+}
+/* form table tr td .form-field > .form-input:focus {
+  
+} */
+.form-input:focus {
+  outline: none;
+  border-color: #6a5af9;
+}
+.form-input:focus + .form-label {
+  top: 12px;
+  padding: 10px;
+  left: 0px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
