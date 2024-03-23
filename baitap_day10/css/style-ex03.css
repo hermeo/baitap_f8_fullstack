@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #323641;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.envelope {
+  width: 250px;
+  height: 175px;
+  position: relative;
+  cursor: pointer;
+}
+.envelope .envelope-front {
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid #ff7f50;
+  border-bottom: 62.5px solid #ff7f50;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.envelope .envelope-front::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 62.5px solid transparent;
+  border-bottom: 62.5px solid transparent;
+  border-left: 127.5px solid #ff8c69;
+  border-right: 127.5px solid transparent;
+  top: -62.5px;
+  left: -125px;
+}
+.envelope .envelope-back {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 125px;
+  background-color: #ff6347;
+  transition: background-color 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.envelope .envelope-letter {
+  width: 200px;
+  height: 75px;
+  background-color: #fff;
+  position: absolute;
+  left: calc(50% - 100px);
+  bottom: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.envelope .envelope-open {
+  width: 0;
+  height: 0;
+  border-left: 126px solid transparent;
+  border-right: 125px solid transparent;
+  border-top: 62.5px solid #ff6347;
+  position: absolute;
+  bottom: 62.5px;
+  transform-origin: top;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 1;
+  transition-delay: 0.4s;
+}
+
+.envelope:hover .envelope-letter {
+  transform: translateY(-125px) scale(1);
+  height: 125px;
+  opacity: 1;
+}
+
+.envelope:hover .envelope-open {
+  transform: rotateX(180deg);
+  z-index: 0;
+  transition-delay: 0s;
+  transition: z-index 0s;
+}
+
+.envelope:hover .envelope-back {
+  background-color: #ff7f50;
+}

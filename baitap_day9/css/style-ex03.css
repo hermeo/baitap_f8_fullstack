@@ -49,6 +49,7 @@ form > div > button {
   left: 10px;
   top: 50%;
   pointer-events: none;
+
   color: #999;
   /* transform: translate(50%, 50%); */
 }

@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 1200px;
+  height: 500px;
+  background-color: #31a8f7;
+  position: relative;
+}
+.menu {
+  width: 1200px;
+  height: 500px;
+  position: relative;
+}
+.tab-menu {
+  position: fixed;
+  top: 10%;
+  display: none;
+  /* opacity: ; */
+}
+
+.tab {
+  display: inline-block;
+  width: 60px;
+  height: 70px;
+  background-color: #fff;
+  /* margin-left: 10px; */
+  border-bottom-right-radius: 50%;
+  transition: all 0.5s linear;
+  position: relative;
+}
+.tab i {
+  cursor: pointer;
+}
+/* .tab::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0c9";
+  cursor: pointer;
+  transition: all 0.5s linear;
+} */
+
+.tab i {
+  margin-left: 10px;
+  position: fixed;
+  top: 4%;
+  left: 1%;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+i:active {
+  transform: rotate(360deg);
+}
+
+#check-icon:checked + .tab {
+  background-color: white;
+  width: 1600px;
+  height: 1000px;
+  /* width: 1200px;
+  height: 500px;
+  transform: scale(10); */
+}
+/* #check-icon:checked + .tab i {
+  transform: rotate(360deg);
+} */
+/* .tab label i:nth-child(1):active {
+  transform: rotate(360deg);
+} */
+
+/* .tab:checked + .icon i:nth-child(1) {
+  display: none;
+} */
+#check-icon:checked ~ .tab-menu {
+  display: block;
+}
+/* .tab:hover {
+  transform: scale(100);
+} */
+.icon {
+  position: fixed;
+}
+.tab-menu {
+  margin-left: 30px;
+}
+.tab-menu ul li {
+  list-style: none;
+  padding: 10px;
+}
+.tab-menu ul li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.tab-menu ul li {
+  /* text-decoration: none; */
+  color: #31a7f3;
+  cursor: pointer;
+}
+.tab-menu ul li:hover {
+  color: #31a7f3;
+  background-color: grey;
+}
+/* .tab:active + .icon {
+  transform: rotate(360deg);
+} */
+.content {
+  position: absolute;
+  right: 0;
+  bottom: 60%;
+  color: white;
+}
+.content > h1 {
+  font-size: 35px;
+}
+.content > p > span {
+  font-size: 20px;
+}

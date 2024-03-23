@@ -96,7 +96,7 @@ p {
   /* color: white; */
 }
 
-.year:hover + .content span {
+.year:hover + .content span:hover {
   background-color: #a26f5a;
 
   color: white;
