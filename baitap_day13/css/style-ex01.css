@@ -1,0 +1,551 @@
+body {
+  background-image: url(../image/landing-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Rajdhani;
+  /* background-position: center top; */
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+}
+@font-face {
+  font-family: Rajdhani;
+  src: url(../font/Rajdhani-Medium.ttf);
+}
+@font-face {
+  font-family: Rajdhani-bold;
+  src: url(../font/Rajdhani-Bold.ttf);
+}
+.container .col-6-left {
+  color: #fff;
+}
+.col-6-left {
+  margin: 8rem 0;
+}
+.col-6-left-logo {
+  margin: 0 auto;
+}
+.col-6-left-logo > svg {
+  display: inline;
+  width: 30px;
+  padding: 0;
+  height: 50px;
+  /* margin: -10px; */
+  /* padding: 0; */
+  /* height: 10px; */
+  /* background-color: #fff; */
+}
+
+.col6-left-title {
+  font-size: 20px;
+}
+.col6-left-heading {
+  font-size: 130px;
+  font-family: Rajdhani-bold;
+}
+.col6-left-paragraph {
+  margin: 0 auto;
+  width: 400px;
+  font-size: 18px;
+}
+.col6-left-button {
+  font-size: 0;
+}
+.col6-left-button > label {
+  display: inline-block;
+  margin: 50px auto;
+  font-size: 18px;
+  color: #fff;
+  width: 175px;
+  height: 50px;
+
+  position: relative;
+  border: 1px solid #fff;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.col6-left-register {
+  user-select: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.col6-left-login {
+  user-select: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* .col6-left-register {
+  line-height: 50px;
+} */
+/* #login:checked + .col-6-left .col6-left-login {
+  background-color: #fff;
+  color: black;
+} */
+#login:checked + .col-6-left .col6-left-login {
+  background-color: #fff;
+  color: black;
+}
+
+#register:checked + .row .col-6-left .col6-left-register {
+  background-color: #fff;
+  color: black;
+}
+.col6-right-register {
+  position: relative;
+}
+.col6-right-login {
+  top: 2rem;
+  width: 480px;
+  height: 621px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  /* translate: 1000px; */
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(160%);
+  transition: all 0.5s ease;
+}
+
+.col-6-right {
+  overflow: hidden;
+}
+.col6-right-register {
+  width: 485px;
+  height: 694px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  /* right: -100%; */
+  visibility: hidden;
+  /* top: 0; */
+  opacity: 0;
+  transform: translate(160%);
+  transition: all 0.5s ease;
+  /* transform: translate(-50%, 0); */
+  top: -47%;
+  left: 0%;
+  /* overflow: auto; */
+}
+
+#login:checked ~ .col-6-right .col6-right-login {
+  opacity: 1;
+
+  visibility: visible;
+  transform: translate(0);
+}
+#register:checked + .row .col-6-right .col6-right-register {
+  opacity: 1;
+
+  visibility: visible;
+  transform: translate(0);
+}
+.col6-right-register::before {
+  content: "";
+  width: 154px;
+  height: 143px;
+  background-image: url(https://odindesignthemes.com/vikinger/img/landing/rocket.png);
+  position: absolute;
+  top: -5%;
+  left: -10%;
+  /* z-index: 0; */
+  opacity: 0.8;
+}
+.col6-right-login::before {
+  content: "";
+  width: 154px;
+  height: 143px;
+  background-image: url(https://odindesignthemes.com/vikinger/img/landing/rocket.png);
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  /* z-index: 0; */
+  opacity: 0.8;
+}
+.col6-right-login > form {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+
+.col6-right-heading {
+  margin-bottom: 80px;
+}
+.input-user {
+  border: 1px solid gray;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+.input-pass {
+  border: 1px solid grey;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.user {
+  position: relative;
+}
+.placeholder-user {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-user:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-user:not(:placeholder-shown) + .placeholder-user,
+.input-user:focus + .placeholder-user {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+/*password*/
+.pass {
+  position: relative;
+}
+.input-pass {
+  padding: 10px;
+}
+.placeholder-pass {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-pass:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-pass:not(:placeholder-shown) + .placeholder-pass,
+.input-pass:focus + .placeholder-pass {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+.remember-forgot {
+  position: relative;
+  margin-bottom: 50px;
+}
+.remember {
+  position: absolute;
+}
+.forgot {
+  position: absolute;
+  right: 0;
+}
+.forgot a {
+  text-decoration: none;
+  color: #333;
+}
+.forgot a:hover {
+  color: aqua;
+}
+#remember + label {
+  user-select: none;
+  font-family: Rajdhani-bold;
+}
+.button-login {
+  margin-bottom: 30px;
+}
+.button-login button {
+  padding: 20px;
+  width: 354px;
+  height: 55px;
+  background-color: #5753e4;
+  color: #fff;
+  font-family: Rajdhani-bold;
+  border: 1px solid #5753e4;
+  border-radius: 10px;
+}
+.social {
+  font-family: Rajdhani-bold;
+  font-size: 15px;
+}
+.social-title {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.social > .button-social .button-facebook {
+  background-color: #3763d2;
+  padding: 15px;
+  border-radius: 10px;
+}
+.social > .button-social > .button-twitter {
+  background-color: #1abcff;
+  padding: 15px;
+  border-radius: 10px;
+}
+.social > .button-social > .button-mess {
+  background-color: #7b5dfa;
+  padding: 15px;
+  border-radius: 10px;
+}
+.social > .button-social > .button-facebook i {
+  background-color: #fff;
+}
+.social > .button-social > .button-twitter i {
+  color: #fff;
+}
+/* .social > .button-social > .button-mess i {
+  background-color: #7b5dfa;
+} */
+.social > .button-social > .button-youtube {
+  background-color: #fd434f;
+  padding: 15px;
+  border-radius: 10px;
+}
+.social > .button-social button {
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.social > .button-social button:hover {
+  transform: translate(0, -10px);
+}
+
+/*Register*/
+.col6-right-register > form {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+}
+
+.col6-right-heading {
+  margin-bottom: 80px;
+} /*
+register - your- email 
+*/
+/* start*/
+.register-email {
+  position: relative;
+}
+.input-register-email {
+  border: 1px solid gray;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  transition: all 0.5s linear;
+}
+.input-register-email:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-register-email:not(:placeholder-shown) + .placeholder-register-email,
+.input-register-email:focus + .placeholder-register-email {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+.placeholder-register-email {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+/*End*/
+/*register- user*/
+/*Start*/
+.input-register-user {
+  border: 1px solid grey;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.register-user {
+  position: relative;
+}
+.input-register-user {
+  padding: 10px;
+}
+.placeholder-register-user {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-register-user:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-register-user:not(:placeholder-shown) + .placeholder-register-user,
+.input-register-user:focus + .placeholder-register-user {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+/*End*/
+/*register- pass*/
+/*Start*/
+.input-register-pass {
+  border: 1px solid grey;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.register-pass {
+  position: relative;
+}
+.input-register-pass {
+  padding: 10px;
+}
+.placeholder-register-pass {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-register-pass:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-register-pass:not(:placeholder-shown) + .placeholder-register-pass,
+.input-register-pass:focus + .placeholder-register-pass {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+/*End*/
+/*register- repass*/
+/*Start*/
+.input-register-repass {
+  border: 1px solid grey;
+  width: 354px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.register-repass {
+  position: relative;
+}
+.input-register-repass {
+  padding: 10px;
+}
+.placeholder-register-repass {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+  font-size: 16px;
+  user-select: none;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-register-repass:focus {
+  border-color: #6a5af9;
+
+  /* outline: 0; */
+}
+.input-register-repass:not(:placeholder-shown) + .placeholder-register-repass,
+.input-register-repass:focus + .placeholder-register-repass {
+  display: inline-block;
+  top: -20%;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+/*End*/
+/*
+send email
+*/
+/*
+start
+*/
+.send {
+  position: relative;
+  margin-bottom: 50px;
+}
+.send-email {
+  position: absolute;
+}
+
+#sendemail + label {
+  user-select: none;
+  font-family: Rajdhani-bold;
+  font-size: 14px;
+}
+/*
+End
+*/
+/*
+button - register
+*/
+/*start*/
+.button-register {
+  margin-bottom: 30px;
+}
+.button-register button {
+  padding: 20px;
+  width: 354px;
+  height: 55px;
+  background-color: #23d2e2;
+  color: #fff;
+  font-family: Rajdhani-bold;
+  border: 1px solid #23d2e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button-register button:hover {
+  background-color: #1bc5d4;
+}
+/*End*/
+.note {
+  width: 350px;
+  font-size: 14px;
+}
+.note > span {
+  color: #23d2e2;
+}
