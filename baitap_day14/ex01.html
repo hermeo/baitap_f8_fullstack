@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/style-ex01.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+      }
+      /* .heading-slideshow {
+        position: absolute;
+        top: 0;
+        top: 50%;
+        left: 45%;
+        font-size: 25px;
+        line-height: 1.5;
+        color: #fff;
+      } */
+      .heading-slideshow > h2 {
+        font-size: 40px;
+      }
+
+      /* Ẩn video cho hiệu ứng slide */
+      .slides {
+        display: none;
+      }
+
+      /* Ẩn khung video */
+      video {
+        max-width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+      }
+
+      video::-webkit-media-controls {
+        display: none;
+      }
+
+      /* Nút điều khiển */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Nút điều khiển ở bên phải */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* Hiệu ứng khi di chuột qua nút điều khiển */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Chấm tròn để chỉ video */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Hiệu ứng fade */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="row">
+          <div class="col-3 logo"><span>S</span>TRAVEL</div>
+          <div class="col-6 nav">
+            <ul>
+              <li><a href="">Trang chủ</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Điểm đến</a></li>
+              <li><a href="">Dịch vụ</a></li>
+              <li><a href="">Ảnh</a></li>
+              <li><a href="">Blogs</a></li>
+            </ul>
+          </div>
+          <div class="col-3 put">
+            <div class="put-moon">
+              <i class="fa-regular fa-moon" style="color: #ffd43b"></i>
+            </div>
+            <button class="put-button">Đặt ngay</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="row row-banner">
+        <div class="banner col-12">
+          <img src="./image/home-bg.jpg" alt="" />
+          <div class="title-banner">
+            <span>Mumbai</span>
+            <h2>Thành Phố Có Tất Cả</h2>
+            <p>
+              Mumbai Không Chỉ Là Trung Tâm Tài Chính – Kinh Tế, Kinh Đô Điện
+              Ảnh – Thời Trang Của Ấn Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện
+              Đại Nhưng Vẫn Mang Nhiều Nét Cổ Kính Với Những Công Trình Kiến
+              Trúc, Quán Bar, Nhà Hàng, Viện Bảo Tàng Và Các Cửa Hàng Thời Trang
+              Hấp Dẫn…
+            </p>
+            <button>Tìm Hiểu Thêm</button>
+          </div>
+          <div class="banner-endow">
+            <div class="row">
+              <div class="col-6 title-banner-endshow">
+                Ưu Đãi 30.000.000 Cho 5người/3ngày
+              </div>
+              <div class="col-6 button-banner-endshow">
+                <button>Đặt ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-6 col-lg-12 col-xl-6 slideshow">
+          <div class="banner1">
+            <div class="slideshow-container">
+              <div class="slides fade">
+                <video controls>
+                  <source
+                    src="https://stravelhtml.vercel.app/videos/vid-1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="slides fade">
+                <video controls>
+                  <source
+                    src="https://stravelhtml.vercel.app/videos/vid-2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="slides fade">
+                <video controls>
+                  <source
+                    src="https://stravelhtml.vercel.app/videos/vid-3.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+            </div>
+            <br />
+            <div class="heading-slideshow" style="text-align: center">
+              <!-- <h2>MỌI CHUYẾN ĐI ĐỀU ĐÁNG GIÁ</h2>
+              <p>
+                Khám Phá Các Vùng Đất Mới Cùng Chúng Tôi
+                <br />
+                Những Chuyến Đi Đang Chờ Đợi Bạn
+              </p> -->
+
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-12 col-xl-6 content1">
+          <span class="content1-title1">Tại Sao Nên Chọn Stravel</span>
+          <h2 class="content1-title2">Trải Nghiệm Bậc Nhất</h2>
+          <p class="content1-paragraph">
+            Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc
+            Nhất Để Đem Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn Cùng Người Thân
+          </p>
+          <button class="content1-button">Tìm Hiểu Thêm Về Stravel</button>
+        </div>
+      </section>
+      <!-- Content-2-start -->
+      <section class="content2">
+        <div class="row">
+          <div class="col-12">
+            <div class="content2-title1">Những Điểm Đến Ở Mumbai</div>
+            <h2 class="content2-title2">Những Điểm Du Lịch Bậc Nhất</h2>
+          </div>
+        </div>
+        <div class="row content2-row">
+          <div class="col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-1.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Ấn Độ Môn</h2>
+            <p class="box-paragraph">
+              Được Xây Dựng Vào Năm 1931, Còn Có Tên Gọi Khác Là “Bia Kỷ Niệm
+              Chiến Sĩ Ấn Độ”
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-2.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Tòa Nhà Hình Trứng</h2>
+            <p class="box-paragraph">
+              Nghệ Thuật Kiến Trúc Thị Giác Kết Hợp Với Cách Sản Xuất, Sử Dụng
+              Và Tái Tạo Năng Lượng Thông Minh
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-3.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Vườn Quốc Gia Sanjay Gandhi</h2>
+            <p class="box-paragraph">
+              Bao Gồm Loài Bướm Đêm Atlas – Bướm Đêm Lớn Nhất Thế Giới, Cây Hoa
+              Karvi 7 Năm Nở Hoa Một Lần…
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-4.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Trung Tâm Triễn Lãm Jehanggir</h2>
+            <p class="box-paragraph">
+              Khu Vực Triển Lãm Hàng Đầu Ở Mumbai Dành Cho Nền Mỹ Thuật Ấn Độ
+              Đương Đại
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-5.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Hang Động Elephanta</h2>
+            <p class="box-paragraph">
+              Lưu Giữ Nhiều Kiến Trúc Chạm Khắc Tinh Xảo Và Chúng Đã Xuất Hiện Ở
+              Đây Từ Thế Kỷ Thứ 5 Đến Thứ 8
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-6.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Lonavala Và Khandala</h2>
+            <p class="box-paragraph">
+              Khu Nghỉ Dưỡng Rất Nổi Tiếng, Nằm Giữa Đường Cao Tốc Mumbai –
+              Pune.
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-7.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Thành Phố Pune</h2>
+            <p class="box-paragraph">
+              Giáo Dục, Nghệ Thuật Và Âm Nhạc Là Trọng Tâm Tại Thành Phố Có Nền
+              Văn Hóa Phong Phú Lâu Đời Này
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+          <div class="col-3 col-lg-6 col-xl-3 box">
+            <div class="box-img">
+              <img src="./image/des-8.jpg" alt="" />
+            </div>
+            <h2 class="box-title">Thành Phố Nashik</h2>
+            <p class="box-paragraph">
+              Là Trung Tâm Hành Hương Lớn Của Người Hindu. Nashik Có Sự Pha Trộn
+              Của Nét Cổ Xưa Và Hiện Đại
+            </p>
+            <div class="box-link"><a href="">Đọc Thêm</a><span>></span></div>
+          </div>
+        </div>
+      </section>
+      <!-- Content-2-End -->
+      <!-- Content-3-start -->
+      <section class="content3">
+        <div class="row">
+          <div class="col-12 col-lg-12 col-xl-12 content-3-title">
+            <div class="content-3-title1">Dịch Vụ</div>
+            <h2 class="content-3-title2">Nâng Cao Trải Nghiệm</h2>
+          </div>
+          <div class="col-lg-6 col-xl-4 box2">
+            <i class="fa-solid fa-globe"></i>
+            <h3 class="box2-title">Rộng Khắp Thế Giới</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+          <div class="col-lg-6 col-xl-4 box2">
+            <span class="material-symbols-outlined"> elderly </span>
+            <h3 class="box2-title">Những Cuộc Phiêu Lưu</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box2">
+            <span class="material-symbols-outlined"> restaurant </span>
+            <h3 class="box2-title">Dịch Vụ Ăn Uống</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box2">
+            <i class="fa-solid fa-hotel"></i>
+            <h3 class="box2-title">Nghỉ Dưỡng Cao Cấp</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box2">
+            <i class="fa-solid fa-wallet"></i>
+            <h3 class="box2-title">Giá Tốt Nhất</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box2">
+            <span class="material-symbols-outlined"> headset_mic </span>
+            <h3 class="box2-title">Hỗ Trợ 24/7</h3>
+            <p class="box2-paragraph">Some Text...</p>
+          </div>
+        </div>
+      </section>
+      <!-- Content-3-end -->
+      <!-- content-4-start -->
+      <section class="content4">
+        <h2 class="content-4-title">Những Bức Ảnh về Mumbai</h2>
+        <div class="row">
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-1.jpg" alt="" />
+            </div>
+            <span class="box3-note">Thành Phố Mumbai</span>
+            <h3 class="box3-title">Vườn Quốc Gia Sanjay Gandhi</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-2.jpg" alt="" />
+            </div>
+            <h3 class="box3-title">Nhà Thờ St John The Evangelist</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-3.jpg" alt="" />
+            </div>
+            <span class="box3-note"
+              >Nằm Trên Đỉnh Ngọn Đồi Malabar Ở Mumba</span
+            >
+            <h3 class="box3-title">Vườn Treo Mumbai</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-4.jpg" alt="" />
+            </div>
+            <span class="box3-note">Bảo Tàng Viện Của Thành Phố Mumbai</span>
+            <h3 class="box3-title">Dr. Bhau Daji Lad</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-5.jpg" alt="" />
+            </div>
+            <span class="box3-note">
+              Di Sản Thế Giới Được UNESCO Nhìn Nhận.</span
+            >
+            <h3 class="box3-title">Tòa Đô Chánh Mumbai</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-6.jpg" alt="" />
+            </div>
+            <span class="box3-note">Mumbai</span>
+            <h3 class="box3-title">Kiến Trúc Thời Victoria</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-7.jpg" alt="" />
+            </div>
+            <span class="box3-note"> Khách Sạn 5 Sao Ở Mumbai</span>
+            <h3 class="box3-title">Khách Sạn Taj Mahal</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-8.jpg" alt="" />
+            </div>
+            <span class="box3-note">Phía Đông Thành Phố Mumbai</span>
+            <h3 class="box3-title">Hang Động Elephanta</h3>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 box3">
+            <div class="box3-img">
+              <img src="./image/gallery-img-9.jpg" alt="" />
+            </div>
+            <span class="box3-note">Mumbai</span>
+            <h3 class="box3-title">Phiên Chợ Địa Phương</h3>
+          </div>
+        </div>
+      </section>
+      <!-- content-4-end -->
+      <!-- content-5-start -->
+      <section class="content5">
+        <div class="row">
+          <div class="col-6 col-lg-12 col-xl-6 box4_1">
+            <h2 class="box4_1-title">Những Lời Đánh Gía Tốt Nhất</h2>
+            <p class="box4_1-paragraph">
+              Tất Cả Những Lời Đánh Giá Chúng Tôi Đều Ghi Nhận Và Tiếp Thu Để
+              Phát Triển. Đây Là Những Đánh Giá Tốt Nhất Về Chuyến Đi Mumbai
+              Này.
+            </p>
+          </div>
+          <div class="col-6 col-lg-12 col-xl-6 box4_2">
+            <div class="row">
+              <div class="col-6 col-lg-4 col-xl-6 box4-comment">
+                <div class="box4_2_comment">
+                  <p>
+                    Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ
+                    Quay Lại Đay Môt Lần Nữa
+                  </p>
+                </div>
+                <div class="box4_2-avatar">
+                  <img src="./image/pic-1.png" alt="" />
+                </div>
+                <div class="box4_2-avatar-name">
+                  <span class="box4_2-name">Duong Nguyen</span>
+                  <span class="box4_2-job">Nội Trợ</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4 col-xl-6 box4-comment">
+                <div class="box4_2_comment">
+                  <p>
+                    Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon. Chắc
+                    Chắn Sẽ Quay Lại Vì Đồ Ăn Hihi
+                  </p>
+                </div>
+                <div class="box4_2-avatar">
+                  <img src="./image/pic-2.png" alt="" />
+                </div>
+                <div class="box4_2-avatar-name">
+                  <span class="box4_2-name">Some People</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4 col-xl-6 box4-comment">
+                <div class="box4_2_comment">
+                  <p>Khách Sạn Ở Rất Tuyệt. Thích Hợp Với 1 Chỗ Nghỉ Dưỡng.</p>
+                </div>
+                <div class="box4_2-avatar">
+                  <img src="./image/pic-3.png" alt="" />
+                </div>
+                <div class="box4_2-avatar-name">
+                  <span class="box4_2-name">Some People</span>
+                  <span class="box4_2-job">Nằm Nhà</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-12 col-xl-6 box4-comment box4-comment2">
+                <div class="box4_2_comment">
+                  <p>
+                    Hướng Dẫn Viên Rất Chu Đáo. Mọi Dịch Vụ Đều Có Và Rất Thoải
+                    Mái
+                  </p>
+                </div>
+                <div class="box4_2-avatar">
+                  <img src="./image/pic-4.png" alt="" />
+                </div>
+                <div class="box4_2-avatar-name">
+                  <span class="box4_2-name">Some People</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- content-5-end -->
+      <!-- content-6-start -->
+      <section class="content6">
+        <h2 class="content6-title">ĐÁNH GIÁ</h2>
+        <div class="row">
+          <div class="col-5 col-lg-12 col-xl-5 content6-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7447.871340920206!2d105.79563609016459!3d21.035259836361732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab40a0cb102f%3A0xd0e992b25b04d72c!2zUXVhbiBIb2EsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1712388787365!5m2!1svi!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-7 col-lg-12 col-xl-7 content6-form">
+            <form action="">
+              <table class="content6-table">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      class="content6-input"
+                      placeholder="Tên của bạn"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="content6-input"
+                      placeholder="Email liên hệ"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      class="content6-input"
+                      placeholder="Số điện thoại"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="content6-input"
+                      placeholder="Chủ đề"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <textarea
+                      name=""
+                      id="content6-rating"
+                      cols="80"
+                      rows="10"
+                      placeholder="Viết Đánh giá của bạn về chuyến đi"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="content6-button">Gửi Tới Stravel</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- content-6-end -->
+      <!-- content7-start -->
+      <section class="content7">
+        <div class="content7-title1">Blogs & Posts</div>
+        <h2 class="content7-title2">Tìm Hiểu Thêm Về Mumbai</h2>
+        <div class="row content7-box">
+          <div class="col-4 col-lg-6 col-xl-4 content7-box-blog">
+            <div class="content7-box-blog-image">
+              <img src="./image/blog-1.jpg" alt="" />
+            </div>
+            <div class="content7-box-blog-title">
+              <h3>Mang Những Gì Khi Đi Mumbai</h3>
+            </div>
+            <div class="content7-box-blog-para">
+              <p>
+                Giấy Tờ Tuỳ Thân, Giấy Xác Minh Tài Chính, Visa, Vé Máy Bay,
+                Trang Phục, Đồ Dùng Cá Nhân, Balo, Túi Đựng Đồ...
+              </p>
+            </div>
+            <div class="content7-box-blog-time">
+              <span class="material-symbols-outlined content7-box-blog-time-1">
+                schedule
+              </span>
+              <span class="content7-box-blog-time-2"> 22,11, 2021</span>
+            </div>
+            <div class="content7-box-blog-user">
+              <i class="fa-solid fa-user"></i>
+              <span class="content7-box-blog-admin">By Admin</span>
+            </div>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 content7-box-blog">
+            <div class="content7-box-blog-image">
+              <img src="./image/blog-2.jpg" alt="" />
+            </div>
+            <div class="content7-box-blog-title">
+              <h3>Xin Visa Đi Mumbai</h3>
+            </div>
+            <div class="content7-box-blog-para">
+              <p>
+                Visa Ai Cập Không Khó Xin, Thủ Tục Đơn Giản Gồm Đơn Tải Từ Trang
+                Web Chính Thức Của Đại Sứ Quán
+              </p>
+            </div>
+            <div class="content7-box-blog-time">
+              <span class="material-symbols-outlined content7-box-blog-time-1">
+                schedule
+              </span>
+              <span class="content7-box-blog-time-2"> 22,11, 2021</span>
+            </div>
+            <div class="content7-box-blog-user">
+              <i class="fa-solid fa-user"></i>
+              <span class="content7-box-blog-admin">By Admin</span>
+            </div>
+          </div>
+          <div class="col-4 col-lg-6 col-xl-4 content7-box-blog">
+            <div class="content7-box-blog-image">
+              <img src="./image/blog-3.jpg" alt="" />
+            </div>
+            <div class="content7-box-blog-title">
+              <h3>Phương Tiện Di Chuyển</h3>
+            </div>
+            <div class="content7-box-blog-para">
+              <p>
+                Bạn Có Thể Đi Xe Bus, Tàu Lửa, Tàu Thủy Hoặc Bất Cứ Phương Tiện
+                Nào Có Thể Di Chuyển Đều Được.
+              </p>
+            </div>
+            <div class="content7-box-blog-time">
+              <span class="material-symbols-outlined content7-box-blog-time-1">
+                schedule
+              </span>
+              <span class="content7-box-blog-time-2"> 21st May, 2021</span>
+            </div>
+            <div class="content7-box-blog-user">
+              <i class="fa-solid fa-user"></i>
+              <span class="content7-box-blog-admin">By Admin</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- content7-end -->
+    </div>
+    <!-- content8-start -->
+    <section class="content8">
+      <span class="content8-title1">Cùng STravel</span>
+      <h2 class="content8-title2">Bắt Đầu Chuyến Đi Của Bạn</h2>
+      <p class="content8-para">
+        Mỗi Chuyến Đi Đều Là Một Kỷ Niệm Đẹp. Hãy Cùng STravel Ghi Lại Kỷ Niệm
+        Này !
+      </p>
+      <button class="content8-button">Đặt ngay</button>
+    </section>
+    <!-- content8-end -->
+    <!-- footer-start -->
+    <footer>
+      <div class="container">
+        <div class="row footer">
+          <div class="col-3 col-lg-4 col-xl-3 footer-box1">
+            <div class="footer-box1-logo"><span>S</span>TRAVEL</div>
+            <p class="footer-box1-para">
+              Trải Qua 17 Năm Phát Triển Bền Vững, STravel Đã Ghi Dấu Ấn Của
+              Mình Với Thông Điệp “Nâng Tầm Trải Nghiệm Từng Chuyến Đi”
+            </p>
+            <div class="footer-box1-icon">
+              <div class="box1-icon icon-facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="box1-icon icon-facebook">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="box1-icon icon-facebook">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="box1-icon icon-facebook">
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 col-lg-4 col-xl-3 footer-box2">
+            <h3 class="footer-box2-title">Chuyển Hướng Nhanh</h3>
+            <ul class="footer-box2-list">
+              <li>
+                <a href="">Trang chủ</a>
+              </li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Điểm đón</a></li>
+              <li><a href="#">Dịch vụ</a></li>
+              <li><a href="#">Ảnh</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <div class="col-3 col-lg-4 col-xl-3 footer-box3">
+            <h3 class="footer-box3-title">Liên Hệ</h3>
+            <ul class="footer-box3-list">
+              <li>
+                <span class="material-symbols-outlined"> flag </span> Hà Nội,
+                Việt Nam
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> phone_enabled </span>
+                +84-986-921-104
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> mail </span>
+                Duongcoilc2004@Gmail.Com
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> schedule </span> 7:00am
+                - 10:00pm
+              </li>
+            </ul>
+          </div>
+          <div class="col-3 col-lg-4 col-xl-3 footer-box4">
+            <h3 class="footer-box4-title">Tin Tức Mới</h3>
+            <p class="footer-box4-para">
+              Đăng Ký Để Nhận Tin Tức Về Ưu Đãi Sớm Nhất!
+            </p>
+            <div class="footer-box4-input">
+              <input type="text" placeholder="Email của bạn" />
+            </div>
+            <div class="footer-box4-button">
+              <button>Đăng ký</button>
+            </div>
+          </div>
+          <div class="col-12 footer-end">
+            <div class="footer-end-para">
+              Created By <span>STravel</span> | All Rights Reserved!
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        pauseVideos();
+        let currentVideo =
+          slides[slideIndex - 1].getElementsByTagName("video")[0];
+        if (currentVideo) {
+          currentVideo.play();
+          setTimeout(showSlides, 3000); // Chuyển video sau 3 giây
+        }
+      }
+
+      function pauseVideos() {
+        let videos = document.getElementsByTagName("video");
+        for (let i = 0; i < videos.length; i++) {
+          videos[i].pause();
+        }
+      }
+
+      // Kiểm soát hiển thị video
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Kiểm soát hiển thị video theo chấm tròn
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+    </script>
+  </body>
+</html>
