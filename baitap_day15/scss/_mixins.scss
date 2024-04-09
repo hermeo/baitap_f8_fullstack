@@ -1,0 +1,16 @@
+@mixin screenLapTopBig {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screenLapTop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin screenTabLet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}

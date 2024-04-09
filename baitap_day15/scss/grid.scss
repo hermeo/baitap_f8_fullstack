@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./mixins";
+@import "./reset";
+
+.container {
+  max-width: #{$max-width};
+  margin: 0 auto;
+  padding: 0 15px;
+
+  .row {
+    display: flex;
+
+    flex-grow: row wrap;
+    margin: 0 (0 - $space-place / 2);
+    padding: 0 15px;
+    @for $i from 1 through 12 {
+      #{$class-col}#{$i} {
+        flex-basis: 1/12 * 100% * $i;
+        max-width: 1/12 * 100% * $i;
+      }
+    }
+  }
+}
+@each $x, $y in $breakpoints {
+  @media screen and (min-width: $y) {
+    @for $i from 1 through 12 {
+      #{$class-col}#{$x + "-"}#{$i} {
+        flex-basis: 1/12 * 100% * $i;
+        max-width: 1/12 * 100% * $i;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  @for $i from 1 through 12 {
+    #{$class-col + "sm-"}#{$i} {
+      flex-basis: 1/12 * 100% * $i;
+      max-width: 1/12 * 100% * $i;
+    }
+  }
+}

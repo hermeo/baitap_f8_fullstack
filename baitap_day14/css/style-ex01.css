@@ -367,6 +367,7 @@ start
   height: 321px;
   border-radius: 20px;
 }
+/* .box3 {} */
 .box3-note {
   display: inline-block;
 }
@@ -531,8 +532,8 @@ start
   margin: 10px;
 } */
 .content7-box-blog-image > img {
-  width: 407px;
-  height: 246px;
+  width: 100%;
+  height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   transition: transform 0.3s linear;
@@ -819,15 +820,84 @@ footer {
 }
 
 /* footer-end */
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (max-width: 1350px) and (min-width: 1400px) {
+  /* .slideshow {
+    flex-basis: 100%;
+  }
+  .content1 {
+    flex-basis: 50%;
+  } */
   .box {
-    flex-basis: 400px;
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1350px) {
+  .slideshow {
+    flex-basis: 100%;
+  }
+  .content1 {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 119.98px) and (max-width: 1300px) {
+  .title-banner {
+    left: 20%;
   }
   .row {
-    margin: 0 40px 0 50px;
+    margin: 0 35px 0 35px;
+  }
+  .content2-row {
+    /* margin: 0 80px; */
+    justify-content: center;
+  }
+  .content2-row > .box {
+    flex-basis: 400px;
+  }
+  .content3 > .row {
+    justify-content: center;
+  }
+  .content4 > .row {
+    justify-content: center;
+    /* column-gap: 30px; */
+    /* margin-left: 10px; */
+    justify-content: center;
+  }
+  .box3-img > img {
+    width: 95%;
+  }
+
+  .content7-box-blog {
+    flex-basis: 330px;
+  }
+  .content7 > .row {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box {
+    flex-basis: 430px;
+  }
+  .box2 {
+    flex-basis: 410px;
+  }
+  .box3-img > img {
+    width: 95%;
+  }
+  .content2 > .row {
+    justify-content: center;
+  }
+  .content3 > .row {
+    justify-content: center;
+  }
+  .title-banner {
+    left: 20%;
+  }
+  .row {
+    margin: 0 35px 0 35px;
   }
   .box4-comment {
-    flex-basis: 240px;
+    flex-basis: 250px;
     /* max-width: 300px; */
   }
   .box4-comment2 {
@@ -840,12 +910,19 @@ footer {
     row-gap: 20px;
   }
   .content6-input {
-    width: 18em;
+    width: 13em;
   }
   .content6-form {
-    flex-basis: 100%;
+    flex-basis: 55%;
   }
   .content7 .row {
     row-gap: 30px;
   }
+
+  .content7 > .row {
+    justify-content: center;
+  }
+  /* .content7-box-blog {
+    flex-basis: 100%;
+  } */
 }
