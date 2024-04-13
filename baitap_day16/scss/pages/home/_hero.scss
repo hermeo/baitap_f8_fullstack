@@ -1,0 +1,376 @@
+//   height: 300px;
+@import "../fontface/font-face";
+// @forward "../fontface/font-face";
+@import "../partials/mixin";
+header {
+  box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+  .container {
+    .row-header {
+      align-items: center;
+      padding: 10px 0;
+      //   box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+
+      // responsive -
+      // @include screenHuge {
+      //   margin-left: 20px;
+      // }
+      .header-logo > img {
+        width: 105px;
+        height: 73px;
+        flex-shrink: 0;
+      }
+      .nav-mobile-tabs {
+        display: none;
+      }
+      .header-nav {
+        // margin-left: 30px;
+        // display: none;
+        ul {
+          margin-left: 50px;
+          li:nth-child(1) {
+            display: inline-block;
+
+            padding: 0 20px;
+            a {
+              display: inline-block;
+              color: green;
+              font-size: 16.667px;
+              // font-style: normal;
+              font-weight: 600;
+              // line-height: 21.667px;
+              font-family: $font-inerBold;
+              &::after {
+                content: "";
+                display: block;
+                position: relative;
+                top: 40px;
+                width: 100%;
+                height: 2px;
+                //   margin-top: 15px;
+                background-color: green;
+              }
+            }
+          }
+          @for $i from 2 through 5 {
+            li:nth-child(#{$i}) {
+              display: inline-block;
+              padding: 0 20px;
+              //   position: relative;
+              a {
+                display: inline-block;
+                color: black;
+                font-size: 16.667px;
+                font-style: normal;
+                font-weight: 600;
+                // line-height: 21.667px;
+                font-family: $font-inerBold;
+
+                &::after {
+                  content: "";
+                  position: relative;
+                  top: 40px;
+                  display: block;
+                  width: 0;
+                  height: 2px;
+                  background-color: green;
+                  //   margin-top: 15px;
+
+                  transition: all 0.5s ease;
+                }
+                &:hover {
+                  color: green;
+                }
+                &:hover::after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          li {
+            display: inline-block;
+            padding: 0 20px;
+            a {
+              font-size: 16.667px;
+              font-style: normal;
+              font-weight: 600;
+              // line-height: 21.667px;
+              font-family: $font-inerBold;
+              color: black;
+            }
+          }
+        }
+      }
+      .header-nav-mobile {
+        display: none;
+      }
+    }
+  }
+}
+//resposive -sart
+@include screenHuge {
+  .container {
+    .row-header {
+      margin-left: 20px;
+    }
+  }
+}
+@include screenBig {
+  .container {
+    .row-header {
+      margin-left: 20px;
+    }
+  }
+}
+@include screenMedium {
+  .container {
+    .row-header {
+      flex-direction: column;
+      position: relative;
+      // margin-left: 20px;
+
+      .header-nav {
+        display: none;
+      }
+      #nav-mobile:checked ~ .nav-mobile-overlow {
+        display: block;
+      }
+      #nav-mobile:checked ~ .header-nav-mobile {
+        left: 0;
+        // display: block !important;
+      }
+      .nav-mobile-tabs {
+        display: block !important;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .nav-mobile-overlow {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        display: none;
+      }
+      .header-nav-mobile {
+        display: block !important;
+        position: fixed;
+        left: -50%;
+        bottom: 0;
+        top: 0;
+        width: 40%;
+
+        background-color: green;
+        z-index: 2;
+        // display: none !important;
+        transition: all 0.5s ease;
+
+        ul {
+          margin-top: 50px;
+          li {
+            // border: 0;
+            display: block;
+            padding: 30px 0;
+            &:hover {
+              background-color: gray;
+            }
+            a {
+              color: black;
+              font-size: 20px;
+            }
+          }
+        }
+        .nav-mobile-close {
+          position: absolute;
+          right: 10%;
+          top: 1rem;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      // .header-nav-mobile::before {
+      //   position: absolute;
+      //   font-size: 30px;
+      //   top: ;
+      //   right: 10%;
+      //   font-weight: 900;
+      //   content: "\f00d";
+      //   font-family: "Font Awesome 5 Free";
+      //   // font-weight: 400;
+      // }
+    }
+  }
+}
+@include screenSmall {
+  .container {
+    .row-header {
+      flex-direction: column;
+      position: relative;
+      // margin-left: 20px;
+
+      .header-nav {
+        display: none;
+      }
+      #nav-mobile:checked ~ .nav-mobile-overlow {
+        display: block;
+      }
+      #nav-mobile:checked ~ .header-nav-mobile {
+        left: 0;
+        // display: block !important;
+      }
+      .nav-mobile-tabs {
+        display: block !important;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .nav-mobile-overlow {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        display: none;
+      }
+      .header-nav-mobile {
+        display: block !important;
+        position: fixed;
+        left: -50%;
+        bottom: 0;
+        top: 0;
+        width: 40%;
+
+        background-color: green;
+        z-index: 2;
+        // display: none !important;
+        transition: all 0.5s ease;
+
+        ul {
+          margin-top: 50px;
+          li {
+            // border: 0;
+            display: block;
+            padding: 30px 0;
+            &:hover {
+              background-color: gray;
+            }
+            a {
+              color: black;
+              font-size: 20px;
+            }
+          }
+        }
+        .nav-mobile-close {
+          position: absolute;
+          right: 10%;
+          top: 1rem;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      // .header-nav-mobile::before {
+      //   position: absolute;
+      //   font-size: 30px;
+      //   top: ;
+      //   right: 10%;
+      //   font-weight: 900;
+      //   content: "\f00d";
+      //   font-family: "Font Awesome 5 Free";
+      //   // font-weight: 400;
+      // }
+    }
+  }
+}
+@include screenVerySmall {
+  .container {
+    .row-header {
+      flex-direction: column;
+      position: relative;
+      // margin-left: 20px;
+
+      .header-nav {
+        display: none;
+      }
+      #nav-mobile:checked ~ .nav-mobile-overlow {
+        display: block;
+      }
+      #nav-mobile:checked ~ .header-nav-mobile {
+        left: 0;
+        // display: block !important;
+      }
+      .nav-mobile-tabs {
+        display: block !important;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .nav-mobile-overlow {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        display: none;
+      }
+      .header-nav-mobile {
+        display: block !important;
+        position: fixed;
+        left: -50%;
+        bottom: 0;
+        top: 0;
+        width: 50%;
+
+        background-color: green;
+        z-index: 2;
+        // display: none !important;
+        transition: all 0.5s ease;
+
+        ul {
+          margin-top: 50px;
+          li {
+            // border: 0;
+            display: block;
+            padding: 30px 0;
+            &:hover {
+              background-color: gray;
+            }
+            a {
+              color: black;
+              font-size: 20px;
+            }
+          }
+        }
+        .nav-mobile-close {
+          position: absolute;
+          right: 10%;
+          top: 1rem;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      // .header-nav-mobile::before {
+      //   position: absolute;
+      //   font-size: 30px;
+      //   top: ;
+      //   right: 10%;
+      //   font-weight: 900;
+      //   content: "\f00d";
+      //   font-family: "Font Awesome 5 Free";
+      //   // font-weight: 400;
+      // }
+    }
+  }
+}
+//resposive -end

@@ -1,0 +1,19 @@
+//Import
+@use "./pages/partials/variable";
+@use "./pages/partials/mixin";
+@use "./pages/partials/reset";
+@use "./pages/partials/base";
+
+//Component
+@use "./components/header";
+@use "./components/footer";
+
+//page
+@use "./pages/home/hero";
+@use "./pages/home/product";
+@use "./pages/home/index";
+@use "./pages/fontface/font-face" as font;
+body {
+  font-family: font.$font-inerRegular;
+  overflow-x: hidden;
+}

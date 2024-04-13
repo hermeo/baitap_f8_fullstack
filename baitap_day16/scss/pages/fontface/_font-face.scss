@@ -1,0 +1,10 @@
+$font-inerBold: Inter-bold;
+$font-inerRegular: Inter0regular;
+@font-face {
+  font-family: $font-inerBold;
+  src: url(../font/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: $font-inerRegular;
+  src: url(../font/Inter-Regular.ttf);
+}

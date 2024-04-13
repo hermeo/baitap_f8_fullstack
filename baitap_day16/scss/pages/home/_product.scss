@@ -1,0 +1,183 @@
+@use "../fontface/font-face" as font;
+@import "../partials/mixin";
+@import "../home/hero";
+
+@mixin product3($url) {
+  position: relative;
+  //   width: 100px;
+  justify-self: center;
+  flex-basis: 25%;
+  //   width: 450px;
+  max-width: 50%;
+  height: 450px;
+  background-image: url($url);
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  //   border-radius: 269.316px;
+  //   border-radius: 269.316px;
+  //   background: var(--Orange-300, #ffba94);
+  //   background: var(--Orange-300, #ffba94);
+  .content3-item-img {
+    position: absolute;
+    bottom: 20%;
+  }
+  .content3-item-content {
+    position: absolute;
+    bottom: -15%;
+    .content3-item-content-title {
+      display: inline-block;
+      cursor: pointer;
+      //   position: relative;
+      //   width: $width;
+      font-size: 23.333px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0 auto;
+      font-family: font.$font-inerBold;
+      &::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 2px;
+        margin: 0 auto;
+        bottom: -5px;
+        // top: 0;
+        // border-color: orange;
+        background-color: #a3a3a3;
+        transition: all 0.3s ease;
+        span {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        color: #216000;
+      }
+    }
+    .content3-item-content-quantity {
+      //   width: 150px;
+      font-size: 16.667px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21.667px;
+      padding: 10px;
+    }
+    .content3-item-content-price {
+      .item-price {
+        font-size: 30px;
+        font-family: font.$font-inerBold;
+      }
+      padding: 10px;
+    }
+
+    .item-content-button {
+      background-color: #46b20f;
+      color: #fff;
+      padding: 10px;
+      border: 1px solid #46b20f;
+      cursor: pointer;
+      &:hover {
+        background-color: gray;
+        border: 1px solid #46b20f;
+      }
+    }
+  }
+}
+@mixin product4 {
+  .content4-item-img {
+    img {
+      width: 385px;
+      height: 273.333px;
+      flex-shrink: 0;
+      border-radius: 6.667px;
+    }
+  }
+  .content4-item-content {
+    .content4-item-date {
+      padding: 10px 0;
+      position: relative;
+      .content4-item-date-left {
+        position: absolute;
+        left: 0;
+        color: #46b20f;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .content4-item-date-right {
+        position: absolute;
+        right: 0;
+        color: var(--grey-500-main, #a3a3a3);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .content4-item-title {
+      padding: 20px 0;
+      color: var(--Content, #2c2c2c);
+      font-family: font.$font-inerBold;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26.667px; /* 133.333% */
+    }
+  }
+}
+@mixin product5($width) {
+  .content5-item-content {
+    padding: 20px;
+    width: $width;
+    .content5-item-content-title {
+      color: var(--Orange-700, #e05000);
+      // text-shadow: 0px 3.333px 3.333px rgba(0, 0, 0, 0.25);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26.667px; /* 133.333% */
+    }
+    .content5-item-content-para {
+      color: var(--Content, #19191b);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.417px; /* 127.604% */
+    }
+  }
+}
+@mixin product6($width) {
+  // float: left;
+
+  .row {
+    .content6-item-right {
+      .content6-item-content {
+        width: $width;
+        height: 100px;
+        h2 {
+          color: var(--Content, #2c2c2c);
+          // font-family: Inter;
+          font-family: font.$font-inerBold;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 26.667px; /* 133.333% */
+        }
+        p {
+          color: var(--Content, #2c2c2c);
+          //   font-family: Inter;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
