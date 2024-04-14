@@ -291,6 +291,8 @@ header {
 }
 @include screenVerySmall {
   .container {
+    // width: 400px;/
+    // width: 100%;
     .row-header {
       flex-direction: column;
       position: relative;
@@ -373,4 +375,5 @@ header {
     }
   }
 }
+
 //resposive -end

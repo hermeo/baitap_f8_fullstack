@@ -137,43 +137,43 @@ Khi gọi class ở màn hình nào chỉ hoạt động ở màn hình đó tr�
   }
 }
 @media screen and (max-width: 576px) {
-  .col-sm-1 {
+  .col-smm-1 {
     --column-number: 1;
   }
-  .col-sm-2 {
+  .col-smm-2 {
     --column-number: 2;
   }
-  .col-sm-3 {
+  .col-smm-3 {
     --column-number: 3;
   }
-  .col-sm-4 {
+  .col-smm-4 {
     --column-number: 4;
   }
-  .col-sm-5 {
+  .col-smm-5 {
     --column-number: 5;
   }
-  .col-sm-6 {
+  .col-smm-6 {
     --column-number: 6;
   }
-  .col-sm-7 {
+  .col-smm-7 {
     --column-number: 7;
   }
-  .col-sm-8 {
+  .col-smm-8 {
     --column-number: 8;
   }
-  .col-sm-9 {
+  .col-smm-9 {
     --column-number: 9;
   }
-  .col-sm-10 {
+  .col-smm-10 {
     --column-number: 10;
   }
-  .col-sm-11 {
+  .col-smm-11 {
     --column-number: 11;
   }
-  .col-sm-12 {
+  .col-smm-12 {
     --column-number: 12;
   }
-  .offset-sm-1 {
+  .offset-smm-1 {
     /*
       number = 1
       cell-number = 12
@@ -183,39 +183,39 @@ Khi gọi class ở màn hình nào chỉ hoạt động ở màn hình đó tr�
     max-width: calc(1 / 12 * 100% * 1); */
     --column-number-offset: 1;
   }
-  .offset-sm-2 {
+  .offset-smm-2 {
     /* flex-basis: calc(1 / 12 * 100% * 2);
     max-width: calc(1 / 12 * 100% * 2); */
     --column-number-offset: 2;
   }
-  .offset-sm-3 {
+  .offset-smm-3 {
     --column-number-offset: 3;
   }
-  .offset-sm-4 {
+  .offset-smm-4 {
     --column-number-offset: 4;
   }
-  .offset-sm-5 {
+  .offset-smm-5 {
     --column-number-offset: 5;
   }
-  .offset-sm-6 {
+  .offset-smm-6 {
     --column-number-offset: 6;
   }
-  .offset-sm-7 {
+  .offset-smm-7 {
     --column-number-offset: 7;
   }
-  .offset-sm-8 {
+  .offset-smm-8 {
     --column-number-offset: 8;
   }
-  .offset-sm-9 {
+  .offset-smm-9 {
     --column-number-offset: 9;
   }
-  .offset-sm-10 {
+  .offset-smm-10 {
     --column-number-offset: 10;
   }
-  .offset-sm-11 {
+  .offset-smm-11 {
     --column-number-offset: 11;
   }
-  .offset-sm-12 {
+  .offset-smm-12 {
     --column-number-offset: 12;
   }
 }
