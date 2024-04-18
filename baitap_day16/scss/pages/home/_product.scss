@@ -12,7 +12,7 @@
   max-width: 50%;
   height: 450px;
   background-image: url($url);
-  background-size: 300px 300px;
+  background-size: 100% 300px;
   background-repeat: no-repeat;
   flex-shrink: 0;
   //   border-radius: 269.316px;
@@ -173,32 +173,32 @@
 }
 
 @mixin product3-mobile2($url) {
-  position: relative;
+  // position: relative;
+  // margin-left: 80px;
   //   width: 100px;
-  // justify-self: center;
+  justify-self: center;
   flex-basis: 40%;
   //   width: 450px;
   max-width: 50%;
-  height: 450px;
-  background-image: url($url);
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
+  // height: 450px;
+  background-image: none;
+
   flex-shrink: 0;
   margin-bottom: 80px;
 
   .content3-item-img {
-    position: absolute;
-    bottom: 20%;
+    margin: 0 auto;
+    // position: absolute;
   }
   .content3-item-content {
-    position: absolute;
-    bottom: -15%;
+    margin: 0 auto;
+
     .content3-item-content-title {
       display: inline-block;
       cursor: pointer;
       //   position: relative;
       //   width: $width;
-      font-size: 23.333px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -353,11 +353,15 @@
   margin-bottom: 80px;
 
   .content3-item-img {
+    img {
+      width: 150px;
+    }
     position: absolute;
     bottom: 20%;
     margin-bottom: 70px;
   }
   .content3-item-content {
+    // margin-top: 30px;
     position: absolute;
     bottom: -15%;
     .content3-item-content-title {
@@ -365,7 +369,7 @@
       cursor: pointer;
       //   position: relative;
       //   width: $width;
-      font-size: 23.333px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -393,7 +397,7 @@
     }
     .content3-item-content-quantity {
       //   width: 150px;
-      font-size: 16.667px;
+      font-size: 13px;
       font-style: normal;
       font-weight: 400;
       line-height: 21.667px;
@@ -401,7 +405,7 @@
     }
     .content3-item-content-price {
       .item-price {
-        font-size: 30px;
+        font-size: 25px;
         font-family: font.$font-inerBold;
       }
       padding: 10px;
@@ -423,7 +427,7 @@
 
 //mobile
 @mixin product4 {
-  // flex-basis: 100px;
+  // flex-basis: 90%;
   .content4-item-img {
     img {
       max-width: 385px;
@@ -470,6 +474,7 @@
 
 //mobile
 @mixin product4-mobile1 {
+  flex-basis: 50%;
   .content4-item-img {
     img {
       max-width: 385px;
@@ -479,7 +484,7 @@
     }
   }
   .content4-item-content {
-    max-width: 200px;
+    max-width: 400px;
     .content4-item-date {
       padding: 10px 0;
       position: relative;
@@ -514,12 +519,162 @@
     }
   }
 }
+@mixin product4-mobile2 {
+  flex-basis: 80%;
+
+  .content4-item-img {
+    text-align: center;
+    img {
+      max-width: 385px;
+      // max-height: 273.333px;
+      flex-shrink: 0;
+      border-radius: 6.667px;
+    }
+  }
+  .content4-item-content {
+    max-width: 400px;
+    margin: 0 auto;
+    .content4-item-date {
+      padding: 10px 0;
+      position: relative;
+      .content4-item-date-left {
+        position: absolute;
+        left: 0;
+        color: #46b20f;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .content4-item-date-right {
+        position: absolute;
+        right: 0;
+        color: var(--grey-500-main, #a3a3a3);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .content4-item-title {
+      padding: 20px 0;
+      color: var(--Content, #2c2c2c);
+      font-family: font.$font-inerBold;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26.667px; /* 133.333% */
+    }
+  }
+}
+@mixin product4-mobile3 {
+  flex-basis: 40%;
+
+  .content4-item-img {
+    text-align: center;
+    img {
+      max-width: 385px;
+      // max-height: 273.333px;
+      flex-shrink: 0;
+      border-radius: 6.667px;
+    }
+  }
+  .content4-item-content {
+    max-width: 400px;
+    margin: 0 auto;
+    .content4-item-date {
+      padding: 10px 0;
+      position: relative;
+      .content4-item-date-left {
+        position: absolute;
+        left: 0;
+        color: #46b20f;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .content4-item-date-right {
+        position: absolute;
+        right: 0;
+        color: var(--grey-500-main, #a3a3a3);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .content4-item-title {
+      padding: 20px 0;
+      color: var(--Content, #2c2c2c);
+      font-family: font.$font-inerBold;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26.667px; /* 133.333% */
+    }
+  }
+}
+@mixin product4-mobile4 {
+  flex-basis: 40%;
+
+  .content4-item-img {
+    text-align: center;
+    img {
+      max-width: 300px;
+      // max-height: 273.333px;
+      flex-shrink: 0;
+      border-radius: 6.667px;
+    }
+  }
+  .content4-item-content {
+    max-width: 400px;
+    margin: 0 auto;
+    .content4-item-date {
+      padding: 10px 0;
+      position: relative;
+      .content4-item-date-left {
+        position: absolute;
+        left: 0;
+        color: #46b20f;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .content4-item-date-right {
+        position: absolute;
+        right: 0;
+        color: var(--grey-500-main, #a3a3a3);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .content4-item-title {
+      padding: 20px 0;
+      color: var(--Content, #2c2c2c);
+      font-family: font.$font-inerBold;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26.667px; /* 133.333% */
+    }
+    .content4-item-para {
+      font-size: 13px;
+    }
+  }
+}
 
 //mobile
 @mixin product5($width) {
   .content5-item-content {
     padding: 20px;
-    width: $width;
+    max-width: $width;
     .content5-item-content-title {
       color: var(--Orange-700, #e05000);
       // text-shadow: 0px 3.333px 3.333px rgba(0, 0, 0, 0.25);

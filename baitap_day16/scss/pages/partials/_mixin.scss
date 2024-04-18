@@ -29,3 +29,8 @@
     @content;
   }
 }
+@mixin screenVerylowSmall {
+  @media screen and (max-width: 400.98px) {
+    @content;
+  }
+}
