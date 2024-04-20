@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        font-size: 30px;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+      }
+      button {
+        font-size: 30px;
+        padding: 10px;
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+      }
+      input {
+        /* width: 300pxpx; */
+        height: 30px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bài tập</h1>
+    <hr />
+    <h2>Bài tập 1</h2>
+    <div class="input-a">
+      <label for="">a</label>
+      <input type="text" id="input-a" />
+    </div>
+    <br />
+    <div class="input-b">
+      <label for="">b</label>
+      <input type="text" id="input-b" />
+    </div>
+    <br />
+    <button onclick="baitap1()">Hoán vị</button>
+    <div>Ban Đầu</div>
+    <p>a = <label for="" id="a"></label></p>
+    <p>b = <label for="" id="b"></label></p>
+    Hoán vị
+    <p>a = <label for="" id="a-hv"></label></p>
+    <p>b = <label for="" id="b-hv"></label></p>
+    <h2>Bài tập 2</h2>
+    <div>S = 10 + 20 + 5^10 / 2</div>
+    <button onclick="baitap2()">Kết quả</button>
+
+    <div>S = <label for="" id="kq-s"></label></div>
+    <h2>Bài tập 3</h2>
+    <div class="input-a">
+      <label for="">a</label>
+      <input type="text" id="input-a-bt3" />
+    </div>
+    <br />
+    <div class="input-b">
+      <label for="">b</label>
+      <input type="text" id="input-b-bt3" />
+    </div>
+    <br />
+    <div class="input-c">
+      <label for="">c</label>
+      <input type="text" id="input-c-bt3" />
+    </div>
+    <br />
+    <button onclick="baitap3()">Max</button>
+    <div>Max : <label for="" id="kq-bt3"></label></div>
+    <h2>Bài tập 4</h2>
+    <div class="input-a">
+      <label for="">a</label>
+      <input type="text" id="input-a-bt4" />
+    </div>
+    <br />
+    <div class="input-b">
+      <label for="">b</label>
+      <input type="text" id="input-b-bt4" />
+    </div>
+    <br />
+    <button onclick="baitap4()">Kiểm tra</button>
+    <div>Kết quả: <label for="" id="kq4"></label></div>
+    <h2>Bài tập 5</h2>
+    <div class="input-a">
+      <label for="">a</label>
+      <input type="text" id="input-a-bt5" />
+    </div>
+    <br />
+    <div class="input-b">
+      <label for="">b</label>
+      <input type="text" id="input-b-bt5" />
+    </div>
+    <br />
+    <div class="input-c">
+      <label for="">c</label>
+      <input type="text" id="input-c-bt5" />
+    </div>
+    <br />
+    <button onclick="baitap5()">Sắp xếp</button>
+    <div>Kết quả: <label for="" id="kq-bt5"></label></div>
+    <script src="./js/ex01.js"></script>
+  </body>
+</html>
