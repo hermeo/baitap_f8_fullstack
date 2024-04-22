@@ -57,7 +57,6 @@ function baitap3() {
 
   var number = [a, b, c];
   max = number[0];
-
   for (var i = 0; i < number.length; i++) {
     if (max < number[i]) {
       max = number[i];

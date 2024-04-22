@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 18</title>
+    <style>
+      body {
+        text-align: center;
+        font-size: 20px;
+      }
+      button {
+        padding: 10px;
+        background-color: green;
+        cursor: pointer;
+        color: #fff;
+      }
+      .flag {
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .checkerboard {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+      }
+      .black {
+        background-color: #000;
+      }
+
+      .white {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bài tập buổi 18</h1>
+    <hr />
+    <h2>Bài tập 1</h2>
+    <div class="bt-1">
+      <label for="">Số km: </label>
+      <input type="text" id="bt1-input" />
+      <button onclick="baitap1()">Tính tiền</button>
+      <div>Tổng tiền: <span id="bt1-result"></span></div>
+    </div>
+    <h2>Bài tập 2</h2>
+    <div class="bt-2">
+      <label for="">Số điện: </label>
+      <input type="text" id="bt2-input" />
+      <button onclick="baitap2()">Tính tiền</button>
+      <div>Tổng tiền: <span id="bt2-result"></span></div>
+    </div>
+    <h2>Bài tập 3</h2>
+    <div class="bt-3">
+      <label for="">n: </label>
+      <input type="text" id="bt3-input" />
+      <button onclick="baitap3()">Tính</button>
+      <div>S: <span id="bt3-result"></span></div>
+    </div>
+    <h2>Bài tập 4</h2>
+    <div class="bt-4">
+      <label for="">n: </label>
+      <input type="text" id="bt4-input" />
+      <button onclick="baitap4()">Kiểm tra</button>
+      <div id="bt4-result"></div>
+    </div>
+    <h2>Bài tập 5</h2>
+    <div class="bt-5">
+      <label for="">n: </label>
+      <input type="text" id="bt5-input" />
+      <button onclick="baitap5()">Kiểm tra</button>
+      <div id="bt5-result"></div>
+    </div>
+    <h2>Bài tập 6</h2>
+    <div class="bt-6">
+      <button onclick="baitap6()">Bàn cờ</button>
+      <div class="flag"></div>
+    </div>
+    <h2>Bài tập 7</h2>
+    <div class="bt-7">
+      <button onclick="baitap7()">Bảng cửu chương</button>
+      <div id="bt7-result"></div>
+    </div>
+    <script src="./js/ex.js"></script>
+  </body>
+</html>
