@@ -116,6 +116,7 @@ function baitap4() {
   }
 }
 function baitap5() {
+  document.getElementById("bt5-result").innerHTML = "";
   var n = document.getElementById("bt5-input").value;
   // validate
   if (n === "") {
@@ -165,6 +166,7 @@ function baitap6() {
   }
 }
 function baitap7() {
+  document.getElementById("bt7-result").innerHTML = "";
   var parent = document.getElementById("bt7-result");
   for (var i = 1; i <= 10; i++) {
     var tieude = document.createElement("label");
