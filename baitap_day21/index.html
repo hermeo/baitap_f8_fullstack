@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 21</title>
+    <style>
+      body {
+        text-align: center;
+        font-size: 30px;
+      }
+      input {
+        width: 200px;
+        height: 30px;
+        font-size: 30px;
+      }
+      button {
+        padding: 10px;
+        background-color: orange;
+        cursor: pointer;
+        color: #fff;
+        font-size: 30px;
+        transition: all 0.3s ease;
+        border: 1px solid orange;
+      }
+      button:hover {
+        background-color: #fff;
+        color: orange;
+        border: 1px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bài tập buổi 21</h1>
+    <div class="bt1">
+      <h2>Bài tập 1</h2>
+      Number
+      <span id="array-bt1"></span>
+      <br />
+      <button id="bt1-button">Tìm min và vị trí</button>
+      <div>
+        Min: <span id="bt1-min"></span> Vị trí <span id="bt1-index"></span>
+      </div>
+    </div>
+    <div class="bt2">
+      <h2>Bài 2</h2>
+      <div>numbers: <span id="bt2-array"></span></div>
+      <button id="bt2-button">Tính trung bình</button>
+      <div>Trung bình các số nguyên tố: <span id="bt2-result"></span></div>
+    </div>
+    <div class="bt3">
+      <h2>Bài tập 3</h2>
+      <div>Numbers: <span id="bt3-array"></span></div>
+      <button id="bt3-filter">Lọc</button>
+      <div>Numbers: <span id="bt3-result"></span></div>
+    </div>
+    <div class="bt4">
+      <h2>Bài tập 4</h2>
+      <div>Numbers: <span id="bt4-array"></span></div>
+      <input type="text" id="bt4-input" />
+      <button id="bt4-button">Sắp xếp</button>
+      <div>Result: <span id="bt4-result"></span></div>
+    </div>
+    <script src="./js/ex01.js"></script>
+  </body>
+</html>
