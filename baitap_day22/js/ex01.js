@@ -20,37 +20,24 @@ bt1 = () => {
 bt1();
 bt2 = () => {
   var arr = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
-  var arrResult = [];
+
   console.log("Bài tập 2");
   console.log("Ban đầu");
   console.log(arr);
-  for (var index in arr) {
-    if (arr[index].length > 1) {
-      if (arr[index].length > 1) {
-        for (var index1 in arr[index]) {
-          if (arr[index][index1].length > 1) {
-            for (var index2 in arr[index][index1]) {
-              if (arr[index][index1][index2].length > 1) {
-                for (var index3 in arr[index][index1][index2]) {
-                  arrResult.push(arr[index][index1][index2][index3]);
-                }
-              } else {
-                arrResult.push(arr[index][index1][index2]);
-              }
-            }
-          } else {
-            arrResult.push(arr[index][index1]);
-          }
-        }
+
+  function flatArr(arr1) {
+    var arrResult = [];
+    for (var i = 0; i < arr1.length; i++) {
+      if (Array.isArray(arr1[i])) {
+        arrResult = arrResult.concat(flatArr(arr1[i]));
       } else {
-        arrResult.push(arr[index]);
+        arrResult.push(arr1[i]);
       }
-    } else {
-      arrResult.push(arr[index]);
     }
+    return arrResult;
   }
   console.log("Kết quả");
-  console.log(arrResult);
+  console.log(flatArr(arr));
 };
 bt2();
 bt3 = () => {
