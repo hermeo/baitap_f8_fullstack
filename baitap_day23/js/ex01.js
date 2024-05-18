@@ -1,6 +1,6 @@
 bt1 = (number) => {
   console.log("Bài tập 1");
-
+  console.log(`Number: ${number}`);
   let numbers = number;
   checkPrimeNumbers = (n) => {
     if (n < 2) {
@@ -25,12 +25,13 @@ bt1 = (number) => {
   }
   //   return console.log(checkPrimeNumbers(numbers));
 };
-console.log(bt1(13));
+console.log(`Số nguyên tố đối xứng nhỏ nhất lớn hơn hoặc bằng n: ${bt1(13)}`);
 bt2 = () => {
   console.log("Bài tập 2");
   let nums1 = [1, 2];
   let nums2 = [3, 5];
-
+  console.log(`Number1: [${nums1}]`);
+  console.log(`Number2: [${nums2}]`);
   for (var index in nums1) {
     if (nums2.includes(nums1[index])) {
       nums1.splice(index, 1);
@@ -58,6 +59,7 @@ bt2();
 bt3 = () => {
   console.log("Bài tập 3");
   var nums = [7, 8, 9, 11, 12];
+  console.log(`Number: [${nums}]`);
   var firstMissingPositive = function (nums) {
     let n = nums.length;
 
