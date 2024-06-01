@@ -1,0 +1,204 @@
+.form-login-register {
+  display: none;
+}
+.form-login-register .overflow {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+.form-login-register .login__register {
+  border-radius: 10px;
+  position: relative;
+  background-color: white;
+  width: 430px;
+  height: 500px;
+  margin: 30px auto;
+}
+.form-login-register .login__register .login__register__logo {
+  text-align: center;
+  position: relative;
+}
+.form-login-register .login__register .login__register__logo img {
+  display: inline-block;
+  height: 30px;
+  margin: 10px auto;
+}
+.form-login-register .login__register .login__register__logo i {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+.form-login-register .login__register #note {
+  text-align: center;
+  margin: 10px auto;
+}
+.form-login-register .login__register .login__register__button {
+  display: flex;
+  font-size: 0;
+}
+.form-login-register .login__register .login__register__button button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  flex-basis: 100%;
+  font-size: 16px;
+  margin-left: -1px;
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 10px;
+  color: #858585;
+  background-color: #eeeeee;
+  font-weight: bold;
+}
+.form-login-register .login__register .login__register__button button:nth-child(1) {
+  margin-left: 0px;
+}
+.form-login-register .login__register .login__register__button .btn-color {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+}
+.form-login-register .login__register .login__register__google_facebook {
+  display: none;
+  position: relative;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.form-login-register .login__register .login__register__google_facebook button {
+  margin-left: -1px;
+  display: inline-block;
+  padding: 10px;
+  flex-basis: 45%;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+.form-login-register .login__register .login__register__google_facebook button:nth-child(1) {
+  margin-left: 0px;
+}
+.form-login-register .login__register .login__register__google_facebook::after {
+  content: "";
+  width: 412px;
+  height: 1px;
+  background-color: #f6f6f6;
+  position: absolute;
+  bottom: 0;
+}
+.form-login-register .login__register .login__register__google_facebook span {
+  display: inline-block;
+  padding: 0 10px;
+  position: absolute;
+  bottom: -10px;
+  background-color: white;
+  z-index: 1;
+}
+.form-login-register .login__register form {
+  margin: 0 40px;
+}
+.form-login-register .login__register form .login__register__login {
+  display: none;
+  flex-flow: column wrap;
+  align-content: space-evenly;
+  row-gap: 20px;
+}
+.form-login-register .login__register form .login__register__login .input-field {
+  flex-basis: 100%;
+}
+.form-login-register .login__register form .login__register__login .input-field label {
+  display: block;
+  color: black;
+}
+.form-login-register .login__register form .login__register__login .input-field input {
+  text-indent: 10px;
+  width: 350px;
+  height: 30px;
+  border: 1px solid #f7f7f7;
+  outline: 0;
+}
+.form-login-register .login__register form .login__register__login .form-pass {
+  position: relative;
+}
+.form-login-register .login__register form .login__register__login .form-pass .form-input-pass {
+  position: relative;
+}
+.form-login-register .login__register form .login__register__login .form-pass .show-password {
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+.form-login-register .login__register form .login__register__login .form-pass .show-password i {
+  cursor: pointer;
+}
+.form-login-register .login__register form .login__register__login .forget-pass {
+  align-self: flex-end;
+  margin-top: -10px;
+  color: gray;
+  font-weight: 400;
+  font-size: 13px;
+}
+.form-login-register .login__register form .login__register__login .button-login .btn-form-login {
+  background-color: green;
+  border: 1px solid green;
+  padding: 10px;
+  color: white;
+  line-height: 0.1;
+  cursor: pointer;
+}
+.form-login-register .login__register form .login__register__register {
+  position: relative;
+  display: none;
+  flex-flow: column wrap;
+  row-gap: 20px;
+}
+.form-login-register .login__register form .login__register__register .input-field {
+  flex-basis: 100%;
+}
+.form-login-register .login__register form .login__register__register .input-field label {
+  display: block;
+  color: black;
+}
+.form-login-register .login__register form .login__register__register .input-field input {
+  text-indent: 10px;
+  width: 350px;
+  height: 30px;
+  border: 1px solid #f7f7f7;
+  outline: 0;
+}
+.form-login-register .login__register form .login__register__register .form-register-pass {
+  position: relative;
+}
+.form-login-register .login__register form .login__register__register .form-register-pass .form-input-pass-register {
+  position: relative;
+}
+.form-login-register .login__register form .login__register__register .form-register-pass .show-register-password {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+.form-login-register .login__register form .login__register__register .form-register-pass .show-register-password i {
+  cursor: pointer;
+}
+.form-login-register .login__register form .login__register__register .rules {
+  font-size: 14px;
+}
+.form-login-register .login__register form .login__register__register .button-register {
+  position: absolute;
+  bottom: -5%;
+}
+.form-login-register .login__register form .login__register__register .button-register .btn-form-register {
+  background-color: green;
+  border: 1px solid green;
+  padding: 10px;
+  color: white;
+  line-height: 0.1;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
