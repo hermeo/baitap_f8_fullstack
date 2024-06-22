@@ -39,7 +39,7 @@ function next(e) {
   if (nextIndex + 1 === carouselChildren.length) {
     return;
   }
-
+  x;
   carouselChildren[nextIndex].classList.remove("active");
 
   // carouselChildren[nextIndex].classList.remove("previous");
